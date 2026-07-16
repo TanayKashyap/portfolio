@@ -1,12 +1,10 @@
 import type { NextConfig } from "next";
-
-/** Must match the GitHub repository name for project Pages. */
-const repo = "portfolio";
+import { BASE_PATH } from "./lib/paths";
 
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: `/${repo}`,
-  assetPrefix: `/${repo}/`,
+  basePath: BASE_PATH,
+  assetPrefix: `${BASE_PATH}/`,
   trailingSlash: true,
   images: { unoptimized: true },
 };

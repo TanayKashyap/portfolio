@@ -4,6 +4,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 
 import { SECTION_PREVIEWS } from "@/content/previews";
+import { withBasePath } from "@/lib/paths";
 import type { ShelfSection, ThemeName } from "./sections";
 
 interface BookPreviewProps {
@@ -149,7 +150,7 @@ export function BookPreview({ section, theme, onClose }: BookPreviewProps) {
                   ))}
                 </dl>
                 <a
-                  href={section.href}
+                  href={withBasePath(section.href)}
                   data-autofocus
                   className="mt-6 inline-flex items-center justify-center gap-2 self-start bg-accent px-5 py-2.5 font-mono text-sm text-white transition-colors hover:bg-accent/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent dark:text-[#120F1A]"
                 >

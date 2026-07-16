@@ -6,6 +6,7 @@ import { ContactShadows, PerspectiveCamera, Text } from "@react-three/drei";
 import * as easing from "maath/easing";
 import type { Group } from "three";
 
+import { withBasePath } from "@/lib/paths";
 import {
   BOOK_LAYOUT,
   OPEN_POSE,
@@ -27,7 +28,7 @@ interface SceneProps {
   pulls: Record<string, PullState>;
 }
 
-const SPINE_FONT = "/fonts/IBMPlexMono-Medium.woff";
+const SPINE_FONT = withBasePath("/fonts/IBMPlexMono-Medium.woff");
 
 function Book3D({
   layout,
