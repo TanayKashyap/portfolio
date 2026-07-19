@@ -3,27 +3,20 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
-  { label: "about", href: "/about" },
-  { label: "work", href: "/experience" },
-  { label: "projects", href: "/projects" },
-  { label: "skills", href: "/skills" },
-  { label: "books", href: "/books" },
-  { label: "contact", href: "/contact" },
-];
+import { SHELF_SECTIONS } from "@/components/bookshelf/sections";
 
 export function SiteNav() {
   const pathname = usePathname();
 
   return (
     <nav aria-label="Sections" className="hidden md:block">
-      <ul className="flex items-center gap-6 font-mono text-xs">
-        {navLinks.map((link) => {
-          const current = pathname === link.href;
+      <ul className="flex flex-wrap items-center justify-end gap-x-5 gap-y-2 font-mono text-xs">
+        {SHELF_SECTIONS.map((section) => {
+          const current = pathname === section.href;
           return (
-            <li key={link.href}>
+            <li key={section.id}>
               <Link
-                href={link.href}
+                href={section.href}
                 aria-current={current ? "page" : undefined}
                 className={`transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent ${
                   current
@@ -31,7 +24,7 @@ export function SiteNav() {
                     : "text-foreground/65 hover:text-accent"
                 }`}
               >
-                {link.label}
+                {section.spineLabel.toLowerCase()}
               </Link>
             </li>
           );

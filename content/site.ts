@@ -29,7 +29,7 @@ export const site: Site = {
     location: "Waterloo, Ontario",
   },
   links: {
-    email: "t2kashya@uwaterloo.ca",
+    email: "tanayk03@gmail.com",
     linkedin: "https://linkedin.com/in/tanaykashyap",
     github: "https://github.com/TanayKashyap",
   },

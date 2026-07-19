@@ -103,7 +103,7 @@ export const SECTION_PREVIEWS: Record<string, SectionPreview> = {
     title: "Extracurricular",
     kicker: "Data Science Club",
     blurb:
-      "VP of Education — applied AI projects and campus education work.",
+      "Former VP of Education — led applied AI projects and campus education work.",
     facts: extracurricular.map((item) => ({
       label: item.organization,
       value: `${item.role} · ${item.start} – ${item.end}`,

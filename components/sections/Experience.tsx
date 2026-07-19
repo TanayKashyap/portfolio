@@ -46,13 +46,13 @@ export function Experience() {
                   ))}
                 </ul>
                 <ul
-                  aria-label={`Headline numbers at ${role.company}`}
+                  aria-label={`Skills used at ${role.company}`}
                   className="mt-5 flex flex-wrap gap-2"
                 >
                   {role.metrics.map((metric) => (
                     <li
                       key={metric}
-                      className="border border-accent/30 bg-accent-soft/20 px-2.5 py-0.5 font-mono text-xs tabular-nums text-accent"
+                      className="border border-accent/30 bg-accent-soft/20 px-2.5 py-0.5 font-mono text-xs text-accent"
                     >
                       {metric}
                     </li>

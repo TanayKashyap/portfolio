@@ -29,8 +29,8 @@ export function About() {
               keep all of it reliable in production.
             </p>
             <p>
-              On campus I&apos;m the VP of Education at the Data Science Club,
-              where I coordinate applied AI projects with 20+ student
+              On campus I was the VP of Education at the Data Science Club,
+              where I coordinated applied AI projects with 20+ student
               contributors.
             </p>
           </div>
